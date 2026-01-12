@@ -1,2 +1,1 @@
-// Static site confirmation
-console.log("META DEJA VU loaded successfully");
+console.log("META DEJA VU — recursion initialized");
