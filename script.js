@@ -6,13 +6,15 @@ const ctx = document.getElementById("tokenChart");
 
 new Chart(ctx, {
   type: "pie",
-  data: {
-    labels: [
-      "Community",
-      "Ecosystem",
-      "Team",
-      "Liquidity",
-      "Treasury"
+  data: [50, 20, 15, 10, 5],
+labels: [
+  "Community & Liquidity",
+  "Ecosystem & Incentives",
+  "Team",
+  "Treasury",
+  "Marketing"
+],
+
     ],
     datasets: [
       {
