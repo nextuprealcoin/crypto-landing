@@ -576,3 +576,254 @@ p, li {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ========== LITEPAPER PAGE ========== */
+
+.lp-body {
+  background: radial-gradient(circle at top, #050512 0%, #020109 60%, #000000 100%);
+  color: var(--mdv-text);
+}
+
+/* hero */
+
+.lp-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 72px 20px 56px;
+  background: radial-gradient(circle at top,
+    rgba(0,229,255,0.45),
+    rgba(138,43,226,0.35),
+    rgba(255,20,147,0.25),
+    var(--mdv-bg) 80%
+  );
+}
+
+.lp-hero::before {
+  content: "";
+  position: absolute;
+  inset: -30%;
+  background: linear-gradient(
+    135deg,
+    rgba(0,229,255,0.2),
+    rgba(138,43,226,0.24),
+    rgba(255,20,147,0.2)
+  );
+  background-size: 260% 260%;
+  animation: mdvFlow 20s ease-in-out infinite;
+  filter: blur(40px);
+  opacity: 0.9;
+  z-index: 0;
+}
+
+.lp-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.lp-title {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: 2.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 18px 0 12px;
+}
+
+.lp-subtitle {
+  color: var(--mdv-text-muted);
+  font-size: 1.05rem;
+  max-width: 640px;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+.lp-date {
+  font-size: 0.9rem;
+  color: var(--mdv-text-muted);
+  margin-bottom: 18px;
+}
+
+.lp-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.lp-hero-actions {
+  margin-top: 8px;
+}
+
+/* main */
+
+.lp-main {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 56px 20px 80px;
+}
+
+/* sections */
+
+.lp-section {
+  margin-bottom: 40px;
+}
+
+.lp-section-narrow {
+  max-width: 720px;
+}
+
+.lp-section-title {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.lp-subheading {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: 1.1rem;
+  margin-top: 18px;
+  margin-bottom: 6px;
+}
+
+.lp-section p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.lp-list {
+  margin: 6px 0 10px 20px;
+}
+
+.lp-list li {
+  margin-bottom: 4px;
+  font-size: 1rem;
+}
+
+/* table */
+
+.lp-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0 16px;
+  font-size: 0.98rem;
+}
+
+.lp-table th,
+.lp-table td {
+  border: 1px solid rgba(255,255,255,0.14);
+  padding: 8px 10px;
+}
+
+.lp-table th {
+  background: rgba(255,255,255,0.04);
+  text-align: left;
+  font-weight: 600;
+}
+
+/* table of contents */
+
+.lp-toc {
+  list-style: decimal;
+  margin-left: 20px;
+  font-size: 0.98rem;
+}
+
+.lp-toc li {
+  margin-bottom: 4px;
+}
+
+.lp-toc a {
+  color: var(--mdv-cyan);
+  text-decoration: none;
+}
+
+.lp-toc a:hover {
+  text-decoration: underline;
+}
+
+/* footer */
+
+.lp-footer {
+  padding: 24px 20px 32px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  background: radial-gradient(circle at top, #050512 0%, #020109 60%);
+}
+
+.lp-footer-inner {
+  max-width: 840px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lp-footer p {
+  font-size: 0.85rem;
+  color: var(--mdv-text-muted);
+}
+
+.lp-footer-links {
+  display: flex;
+  gap: 12px;
+}
+
+.lp-footer-links a {
+  font-size: 0.85rem;
+  color: var(--mdv-text-muted);
+  text-decoration: none;
+}
+
+.lp-footer-links a:hover {
+  color: var(--mdv-cyan);
+}
+
+/* keep using the same scroll reveal */
+
+/* ========== PRINT (PDF EXPORT) ========== */
+@media print {
+  body,
+  .lp-body {
+    background: #ffffff !important;
+    color: #111827 !important;
+  }
+
+  .lp-hero,
+  .lp-footer {
+    background: #ffffff !important;
+    border: none;
+  }
+
+  .lp-hero::before,
+  .hero::before {
+    display: none !important;
+  }
+
+  a {
+    color: #111827 !important;
+    text-decoration: none;
+  }
+
+  .btn-primary,
+  .btn-ghost,
+  .pill {
+    border: 1px solid #d1d5db !important;
+    background: #ffffff !important;
+    color: #111827 !important;
+    box-shadow: none !important;
+  }
+
+  /* Avoid cutting sections between pages if possible */
+  .lp-section {
+    page-break-inside: avoid;
+  }
+
+  .lp-main {
+    padding: 24px 24px 40px;
+    max-width: 100%;
+  }
+}
