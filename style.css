@@ -6,19 +6,38 @@
 }
 
 body {
-  background: radial-gradient(circle at top, #1a1a2e, #0b0b12);
+  background: #0b0b12;
   color: #ffffff;
   text-align: center;
+  overflow-x: hidden;
 }
 
-/* HERO */
+/* SOLANA-STYLE HERO GRADIENT */
 .hero {
-  padding: 60px 20px;
+  padding: 90px 20px 80px;
+  background:
+    radial-gradient(circle at top,
+      rgba(0,229,255,0.25),
+      rgba(124,255,203,0.15),
+      rgba(11,11,18,1)
+    );
 }
 
+/* LOGO */
 .logo {
-  width: 180px;
-  margin-bottom: 20px;
+  width: 160px;
+  margin-bottom: 26px;
+}
+
+/* SUBTLE GLOW ANIMATION */
+.glow {
+  animation: glowPulse 6s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%   { filter: drop-shadow(0 0 8px rgba(0,229,255,0.3)); }
+  50%  { filter: drop-shadow(0 0 18px rgba(124,255,203,0.6)); }
+  100% { filter: drop-shadow(0 0 8px rgba(0,229,255,0.3)); }
 }
 
 .hero h1 {
@@ -27,52 +46,53 @@ body {
 }
 
 .tagline {
-  margin-top: 10px;
+  margin-top: 12px;
   font-size: 1.1rem;
-  color: #9ddcff;
+  color: #b6f3ff;
 }
 
-/* INFO */
-.info {
-  padding: 50px 20px;
-  max-width: 800px;
+section {
+  padding: 80px 20px;
+  max-width: 900px;
   margin: auto;
 }
 
-.info h2 {
-  margin-bottom: 15px;
-}
+/* NARRATIVE */
 .narrative {
-  max-width: 850px;
-  margin: 80px auto;
-  padding: 0 20px;
-  line-height: 1.8;
-  font-size: 1.05rem;
-  color: #e6f4ff;
+  line-height: 1.9;
 }
 
-.narrative h2 {
-  margin-bottom: 20px;
+.narrative .lead {
+  font-size: 1.25rem;
+  color: #9ddcff;
+  margin-bottom: 24px;
 }
 
-.narrative p {
-  margin-bottom: 16px;
+.narrative .closing {
+  margin-top: 30px;
+  font-style: italic;
+  color: #b6f3ff;
+}
+
+/* WHY SOLANA */
+.why-solana ul {
+  list-style: none;
+  margin: 24px auto;
+  max-width: 500px;
+}
+
+.why-solana li {
+  margin-bottom: 12px;
 }
 
 /* TOKENOMICS */
-.tokenomics {
-  padding: 60px 20px;
-}
-
 .tokenomics-container {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 40px;
   flex-wrap: wrap;
 }
 
-/* PIE */
 #pie-chart {
   width: 220px;
   height: 220px;
@@ -83,10 +103,9 @@ body {
     #ff8fa3 70% 90%,
     #ffd36a 90% 100%
   );
-  box-shadow: 0 0 25px rgba(0, 229, 255, 0.4);
+  box-shadow: 0 0 30px rgba(0,229,255,0.4);
 }
 
-/* LEGEND */
 .legend {
   list-style: none;
   text-align: left;
@@ -94,7 +113,6 @@ body {
 
 .legend li {
   margin-bottom: 10px;
-  font-size: 0.95rem;
 }
 
 .color {
@@ -105,31 +123,24 @@ body {
   border-radius: 3px;
 }
 
-.liquidity {
-  background: #00e5ff;
+.liquidity { background: #00e5ff; }
+.community { background: #7cffcb; }
+.dev { background: #ff8fa3; }
+.marketing { background: #ffd36a; }
+
+/* ROADMAP */
+.roadmap .phase {
+  margin-bottom: 36px;
 }
 
-.community {
-  background: #7cffcb;
-}
-
-.dev {
-  background: #ff8fa3;
-}
-
-.marketing {
-  background: #ffd36a;
-}
-.market {
-  max-width: 900px;
-  margin: 100px auto;
-  padding: 0 20px;
+.phase h3 {
+  color: #9ddcff;
+  margin-bottom: 8px;
 }
 
 /* FOOTER */
 footer {
-  margin-top: 60px;
-  padding: 20px;
+  padding: 40px 20px;
   font-size: 0.8rem;
   opacity: 0.6;
 }
