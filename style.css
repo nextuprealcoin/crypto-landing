@@ -209,6 +209,14 @@ li {
   margin-bottom: 8px;
 }
 
+/* TRADINGVIEW WIDGET STYLING */
+.tradingview-widget-container {
+  margin-top: 30px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0,229,255,0.25);
+}
+
 /* FOOTER */
 footer {
   padding: 40px 20px;
