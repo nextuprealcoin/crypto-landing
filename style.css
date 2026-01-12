@@ -120,6 +120,11 @@ body {
 .marketing {
   background: #ffd36a;
 }
+.market {
+  max-width: 900px;
+  margin: 100px auto;
+  padding: 0 20px;
+}
 
 /* FOOTER */
 footer {
