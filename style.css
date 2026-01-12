@@ -133,12 +133,30 @@ li {
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
+.tokenomics {
+  background: radial-gradient(circle at center,
+    rgba(0,229,255,0.3),
+    rgba(138,43,226,0.25),
+    rgba(255,20,147,0.2),
+    #0b0b12 90%
+  );
+  padding: 100px 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
 /* TOKENOMICS */
 .tokenomics-container {
   display: flex;
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
+}
+
+.tokenomics-container {
+  background: rgba(255,255,255,0.03);
+  padding: 40px;
+  border-radius: 12px;
 }
 
 #pie-chart {
@@ -152,6 +170,10 @@ li {
     #ffd36a 90% 100%
   );
   box-shadow: 0 0 30px rgba(0,229,255,0.4);
+}
+
+#pie-chart {
+  box-shadow: 0 0 40px rgba(255,20,147,0.4); /* pink glow enhancement */
 }
 
 .legend {
