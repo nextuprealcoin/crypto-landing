@@ -23,11 +23,39 @@ body {
   padding: 90px 20px 80px;
   background:
     radial-gradient(circle at top,
-      rgba(0,229,255,0.3),   /* neon blue */
-      rgba(138,43,226,0.25), /* neon purple */
-      rgba(255,20,147,0.2),  /* neon pink */
-      #0b0b12 90%            /* dark base */
+      rgba(0,229,255,0.25),
+      rgba(124,255,203,0.15),
+      rgba(11,11,18,1)
     );
+  position: relative;   /* REQUIRED */
+  overflow: hidden;     /* REQUIRED */
+}
+
+/* ANIMATED MARKET MOMENTUM BACKGROUND */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(0,229,255,0.15),
+    rgba(138,43,226,0.15),
+    rgba(255,20,147,0.15)
+  );
+  background-size: 200% 200%;
+  animation: marketFlow 12s ease-in-out infinite;
+  z-index: -1;
+  pointer-events: none;
+  filter: blur(40px);
+}
+
+@keyframes marketFlow {
+  0%   { background-position: 50% 100%; }
+  50%  { background-position: 50% 0%; }
+  100% { background-position: 50% 100%; }
 }
 
 /* LOGO */
