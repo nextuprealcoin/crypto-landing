@@ -2,85 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>META DEJA VU | Web3 Narrative Asset</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>META DEJA VU</title>
 
-  <!-- Styles -->
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Chart.js (Free CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
+  <!-- HERO -->
+  <section class="hero">
+    <img src="mdv-logo.gif" alt="Meta Deja Vu Logo" class="logo" />
 
-<header class="hero">
-  <img src="mdv-logo.gif" alt="Meta Deja Vu Logo" class="logo" />
-  <h1>META DEJA VU</h1>
-  <p>A meta-narrative digital asset built for cyclical conviction.</p>
+    <h1>META DEJA VU</h1>
+    <p class="tagline">A Recursive Reality on Solana</p>
+  </section>
 
-  <div class="buttons">
-    <a href="#tokenomics">Tokenomics</a>
-    <a href="#roadmap">Roadmap</a>
-  </div>
-</header>
+  <!-- TOKEN INFO -->
+  <section class="info">
+    <h2>Token Overview</h2>
+    <p>
+      Meta Deja Vu (MDV) explores the convergence of recursion, memory, and
+      decentralized narrative on Solana.
+    </p>
+  </section>
 
-<section class="section fade-in">
-  <h2>What Is META DEJA VU?</h2>
-<p>
-  META DEJA VU is a narrative-driven digital asset designed to capitalize on
-  cyclical market psychology, recurring themes, and collective memory within
-  crypto culture.
-</p>
-<p>
-  It represents conviction in patterns that repeat — narratives that resurface
-  stronger each cycle.
-</p>
+  <!-- TOKENOMICS -->
+  <section class="tokenomics">
+    <h2>Tokenomics</h2>
 
-</section>
+    <div class="tokenomics-container">
+      <!-- PIE CHART -->
+      <div class="pie-wrapper">
+        <div id="pie-chart"></div>
+      </div>
 
-<section class="section fade-in" id="tokenomics">
-  <h2>Tokenomics</h2>
+      <!-- LEGEND -->
+      <ul class="legend">
+        <li><span class="color liquidity"></span> Liquidity – 40%</li>
+        <li><span class="color community"></span> Community – 30%</li>
+        <li><span class="color dev"></span> Development – 20%</li>
+        <li><span class="color marketing"></span> Marketing – 10%</li>
+      </ul>
+    </div>
+  </section>
 
-  <div class="tokenomics-grid">
-<ul>
-  <li><strong>Total Supply:</strong> 1,000,000,000 MDV</li>
-  <li>Community & Liquidity: 50%</li>
-  <li>Ecosystem & Incentives: 20%</li>
-  <li>Team (Vested): 15%</li>
-  <li>Treasury: 10%</li>
-  <li>Marketing & Partnerships: 5%</li>
-</ul>
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 META DEJA VU — Built on Solana</p>
+  </footer>
 
-
-    <canvas id="tokenChart"></canvas>
-  </div>
-</section>
-
-<section class="section fade-in" id="roadmap">
-  <h2>Roadmap</h2>
-  <ol>
-    <li>Phase 1 – Launch & Community Growth</li>
-    <li>Phase 2 – Ecosystem Expansion</li>
-    <li>Phase 3 – Scaling & Partnerships</li>
-  </ol>
-</section>
-
-<section class="section fade-in">
-  <h2>Key Principles</h2>
-  <ul>
-    <li>Fixed supply</li>
-    <li>No inflation</li>
-    <li>Community-first distribution</li>
-    <li>Transparent allocation</li>
-  </ul>
-</section>
-
-<footer>
-  <p>© 2026 YourToken. All rights reserved.</p>
-  <p>This website is for informational purposes only.</p>
-</footer>
-
-<script src="script.js"></script>
+  <!-- JS -->
+  <script src="script.js"></script>
 </body>
 </html>
