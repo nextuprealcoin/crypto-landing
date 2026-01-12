@@ -56,6 +56,8 @@ main {
 .section-header {
   max-width: 720px;
   margin-bottom: 40px;
+  position: relative;
+  padding-top: 16px;
 }
 
 .section-header h2 {
@@ -64,6 +66,18 @@ main {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 10px;
+}
+
+/* Gradient bar above section headings */
+.section-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 96px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(to right, var(--mdv-cyan), var(--mdv-purple), var(--mdv-pink));
 }
 
 .section-kicker {
@@ -201,11 +215,15 @@ p, li {
   text-align: left;
 }
 
+/* Gradient text for main logo heading */
 .hero h1 {
   font-size: 3rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   margin-bottom: 16px;
+  background: linear-gradient(to right, var(--mdv-cyan), var(--mdv-purple), var(--mdv-pink));
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .hero-subtitle {
@@ -477,7 +495,7 @@ p, li {
   display: inline-block;
   padding: 10px 22px;
   border-radius: 999px;
-  background: linear-gradient(90deg, var(--mdv-cyan), var(--mdv-purple));
+  background: linear-gradient(90deg, var(--mdv-cyan), var(--mdv-purple), var(--mdv-pink));
   color: #050512;
   font-weight: 600;
   text-decoration: none;
@@ -564,7 +582,7 @@ p, li {
   color: var(--mdv-cyan);
 }
 
-/* ========== LITEPAPER PAGE ========== */
+/* ========== LITEPAPER PAGE (if present) ========== */
 
 .lp-body {
   background: radial-gradient(circle at top, #050512 0%, #020109 60%, #000000 100%);
@@ -616,6 +634,9 @@ p, li {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   margin: 18px 0 12px;
+  background: linear-gradient(to right, var(--mdv-cyan), var(--mdv-purple), var(--mdv-pink));
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .lp-subtitle {
@@ -666,6 +687,19 @@ p, li {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 14px;
+  position: relative;
+  padding-top: 14px;
+}
+
+.lp-section-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 72px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(to right, var(--mdv-cyan), var(--mdv-purple), var(--mdv-pink));
 }
 
 .lp-subheading {
