@@ -80,6 +80,16 @@ p,
 li {
   font-size: 1.2rem; /* Increased from ~1rem */
 }
+/* MID-PAGE LOGO */
+.mid-logo {
+  margin: 40px auto 60px;
+  text-align: center;
+}
+
+.mid-logo .logo {
+  width: 180px;
+  margin: 0;
+}
 
 /* NARRATIVE */
 .narrative {
