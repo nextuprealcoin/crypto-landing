@@ -1,4 +1,4 @@
-/* GLOBAL RESET + TYPOGRAPHY UPGRADE */
+/* GLOBAL RESET + TYPOGRAPHY */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,7 +7,7 @@
 }
 
 html {
-  font-size: 18px; /* Increased from default 16px */
+  font-size: 18px; /* Larger base font */
 }
 
 body {
@@ -15,56 +15,65 @@ body {
   color: #ffffff;
   text-align: center;
   overflow-x: hidden;
-  line-height: 1.75; /* Better readability */
+  line-height: 1.75;
 }
 
-/* SOLANA-STYLE HERO GRADIENT */
+/* ========== HERO / HEADER ========== */
+
 .hero {
+  position: relative;
+  overflow: hidden;
   padding: 90px 20px 80px;
-  background:
-    radial-gradient(circle at top,
-      rgba(0,229,255,0.25),
-      rgba(124,255,203,0.15),
-      rgba(11,11,18,1)
-    );
-  position: relative;   /* REQUIRED */
-  overflow: hidden;     /* REQUIRED */
+  z-index: 0;
 }
 
-/* ANIMATED MARKET MOMENTUM BACKGROUND */
+/* STATIC GRADIENT BACKGROUND MATCHING LOGO COLORS */
 .hero::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
+  background:
+    radial-gradient(circle at top,
+      rgba(0,229,255,0.45),   /* cyan glow */
+      rgba(138,43,226,0.35),  /* purple glow */
+      rgba(255,20,147,0.25),  /* pink glow */
+      #0b0b12 80%
+    );
+  z-index: -2;
+}
+
+/* ANIMATED "UPWARD MOMENTUM" OVERLAY */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: -20%;
   background: linear-gradient(
     120deg,
-    rgba(0,229,255,0.15),
-    rgba(138,43,226,0.15),
-    rgba(255,20,147,0.15)
+    rgba(0,229,255,0.18),
+    rgba(138,43,226,0.18),
+    rgba(255,20,147,0.18)
   );
   background-size: 200% 200%;
   animation: marketFlow 12s ease-in-out infinite;
   z-index: -1;
+  filter: blur(30px);
+  opacity: 0.85;
   pointer-events: none;
-  filter: blur(40px);
 }
 
 @keyframes marketFlow {
-  0%   { background-position: 50% 100%; }
-  50%  { background-position: 50% 0%; }
-  100% { background-position: 50% 100%; }
+  0%   { transform: translateY(20px); background-position: 50% 100%; }
+  50%  { transform: translateY(-20px); background-position: 50% 0%; }
+  100% { transform: translateY(20px); background-position: 50% 100%; }
 }
 
-/* LOGO */
+/* LOGO IN HERO */
 .logo {
   width: 160px;
   margin-bottom: 26px;
 }
 
-/* SUBTLE GLOW ANIMATION */
+/* SUBTLE GLOW ANIMATION ON LOGO */
 .glow {
   animation: glowPulse 6s ease-in-out infinite;
 }
@@ -75,10 +84,24 @@ body {
   100% { filter: drop-shadow(0 0 8px rgba(0,229,255,0.3)); }
 }
 
-/* HEADINGS */
+/* HERO TEXT */
 .hero h1 {
-  font-size: 3.4rem; /* Slightly larger */
+  font-size: 3.4rem;
   letter-spacing: 4px;
+}
+
+.tagline {
+  margin-top: 12px;
+  font-size: 1.3rem;
+  color: #b6f3ff;
+}
+
+/* ========== GENERAL LAYOUT ========== */
+
+section {
+  padding: 80px 20px;
+  max-width: 900px;
+  margin: auto;
 }
 
 h2 {
@@ -90,43 +113,30 @@ h3 {
   font-size: 1.6rem;
 }
 
-/* TAGLINE */
-.tagline {
-  margin-top: 12px;
-  font-size: 1.3rem; /* Increased */
-  color: #b6f3ff;
-}
-
-/* SECTION WRAPPER */
-section {
-  padding: 80px 20px;
-  max-width: 900px;
-  margin: auto;
-}
-
-/* GENERAL TEXT */
 p,
 li {
-  font-size: 1.2rem; /* Increased from ~1rem */
+  font-size: 1.2rem;
 }
-/* MID-PAGE LOGO */
+
+/* MID-PAGE LOGO BETWEEN OVERVIEW & NARRATIVE */
 .mid-logo {
   margin: 40px auto 60px;
   text-align: center;
 }
 
 .mid-logo .logo {
-  width: 250px;
+  width: 140px;
   margin: 0;
 }
 
-/* NARRATIVE */
+/* ========== NARRATIVE SECTION ========== */
+
 .narrative {
   line-height: 1.9;
 }
 
 .narrative .lead {
-  font-size: 1.4rem; /* Larger */
+  font-size: 1.4rem;
   color: #9ddcff;
   margin-bottom: 24px;
 }
@@ -138,7 +148,8 @@ li {
   font-size: 1.3rem;
 }
 
-/* WHY SOLANA */
+/* ========== WHY SOLANA ========== */
+
 .why-solana ul {
   list-style: none;
   margin: 24px auto;
@@ -149,18 +160,9 @@ li {
   margin-bottom: 12px;
 }
 
-.tokenomics {
-  background: radial-gradient(circle at center,
-    rgba(0,229,255,0.3),   /* neon blue */
-    rgba(138,43,226,0.25), /* neon purple */
-    rgba(255,20,147,0.2),  /* neon pink */
-    #0b0b12 90%            /* dark base */
-  );
-  padding: 100px 20px;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-}
+/* ========== TOKENOMICS ========== */
 
+/* Banner-style background just for Tokenomics section */
 .tokenomics {
   background: radial-gradient(circle at center,
     rgba(0,229,255,0.3),
@@ -173,22 +175,19 @@ li {
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-/* TOKENOMICS */
 .tokenomics-container {
   display: flex;
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
-}
-
-.tokenomics-container {
-  background: rgba(255,255,255,0.03);
+  background: rgba(0,0,0,0.35);
   padding: 40px;
   border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0,229,255,0.2);
 }
 
 #pie-chart {
-  width: 240px; /* Slightly larger */
+  width: 240px;
   height: 240px;
   border-radius: 50%;
   background: conic-gradient(
@@ -197,11 +196,7 @@ li {
     #ff8fa3 70% 90%,
     #ffd36a 90% 100%
   );
-  box-shadow: 0 0 30px rgba(0,229,255,0.4);
-}
-
-#pie-chart {
-  box-shadow: 0 0 40px rgba(255,20,147,0.4); /* pink glow enhancement */
+  box-shadow: 0 0 40px rgba(255,20,147,0.4);
 }
 
 .legend {
@@ -227,7 +222,8 @@ li {
 .dev { background: #ff8fa3; }
 .marketing { background: #ffd36a; }
 
-/* ROADMAP */
+/* ========== ROADMAP ========== */
+
 .roadmap .phase {
   margin-bottom: 36px;
 }
@@ -237,7 +233,14 @@ li {
   margin-bottom: 8px;
 }
 
-/* TRADINGVIEW WIDGET STYLING */
+/* ========== MARKET SECTION ========== */
+
+.market .market-note {
+  color: #9ddcff;
+  margin-bottom: 20px;
+}
+
+/* TradingView widget container styling */
 .tradingview-widget-container {
   margin-top: 30px;
   border-radius: 12px;
@@ -245,9 +248,10 @@ li {
   box-shadow: 0 0 30px rgba(0,229,255,0.25);
 }
 
-/* FOOTER */
+/* ========== FOOTER ========== */
+
 footer {
   padding: 40px 20px;
-  font-size: 1rem; /* Increased from 0.8rem */
+  font-size: 1rem;
   opacity: 0.6;
 }
