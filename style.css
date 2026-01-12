@@ -1,3 +1,4 @@
+/* GLOBAL RESET + TYPOGRAPHY UPGRADE */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,11 +6,16 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+html {
+  font-size: 18px; /* Increased from default 16px */
+}
+
 body {
   background: #0b0b12;
   color: #ffffff;
   text-align: center;
   overflow-x: hidden;
+  line-height: 1.75; /* Better readability */
 }
 
 /* SOLANA-STYLE HERO GRADIENT */
@@ -40,21 +46,39 @@ body {
   100% { filter: drop-shadow(0 0 8px rgba(0,229,255,0.3)); }
 }
 
+/* HEADINGS */
 .hero h1 {
-  font-size: 3rem;
+  font-size: 3.4rem; /* Slightly larger */
   letter-spacing: 4px;
 }
 
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+/* TAGLINE */
 .tagline {
   margin-top: 12px;
-  font-size: 1.1rem;
+  font-size: 1.3rem; /* Increased */
   color: #b6f3ff;
 }
 
+/* SECTION WRAPPER */
 section {
   padding: 80px 20px;
   max-width: 900px;
   margin: auto;
+}
+
+/* GENERAL TEXT */
+p,
+li {
+  font-size: 1.2rem; /* Increased from ~1rem */
 }
 
 /* NARRATIVE */
@@ -63,7 +87,7 @@ section {
 }
 
 .narrative .lead {
-  font-size: 1.25rem;
+  font-size: 1.4rem; /* Larger */
   color: #9ddcff;
   margin-bottom: 24px;
 }
@@ -72,6 +96,7 @@ section {
   margin-top: 30px;
   font-style: italic;
   color: #b6f3ff;
+  font-size: 1.3rem;
 }
 
 /* WHY SOLANA */
@@ -94,8 +119,8 @@ section {
 }
 
 #pie-chart {
-  width: 220px;
-  height: 220px;
+  width: 240px; /* Slightly larger */
+  height: 240px;
   border-radius: 50%;
   background: conic-gradient(
     #00e5ff 0% 40%,
@@ -113,6 +138,7 @@ section {
 
 .legend li {
   margin-bottom: 10px;
+  font-size: 1.15rem;
 }
 
 .color {
@@ -141,6 +167,6 @@ section {
 /* FOOTER */
 footer {
   padding: 40px 20px;
-  font-size: 0.8rem;
+  font-size: 1rem; /* Increased from 0.8rem */
   opacity: 0.6;
 }
