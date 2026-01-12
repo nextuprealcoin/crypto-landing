@@ -121,6 +121,18 @@ li {
   margin-bottom: 12px;
 }
 
+.tokenomics {
+  background: radial-gradient(circle at center,
+    rgba(0,229,255,0.3),   /* neon blue */
+    rgba(138,43,226,0.25), /* neon purple */
+    rgba(255,20,147,0.2),  /* neon pink */
+    #0b0b12 90%            /* dark base */
+  );
+  padding: 100px 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
 /* TOKENOMICS */
 .tokenomics-container {
   display: flex;
