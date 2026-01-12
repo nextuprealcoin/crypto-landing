@@ -23,9 +23,10 @@ body {
   padding: 90px 20px 80px;
   background:
     radial-gradient(circle at top,
-      rgba(0,229,255,0.25),
-      rgba(124,255,203,0.15),
-      rgba(11,11,18,1)
+      rgba(0,229,255,0.3),   /* neon blue */
+      rgba(138,43,226,0.25), /* neon purple */
+      rgba(255,20,147,0.2),  /* neon pink */
+      #0b0b12 90%            /* dark base */
     );
 }
 
